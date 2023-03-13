@@ -25,7 +25,6 @@ public class Pelicula {
         StringBuilder sb = new StringBuilder();
         sb.append("Pelicula{");
         sb.append("nombre=").append(nombre);
-        sb.append(" ").append(super.toString());
         sb.append('}');
         return sb.toString();
     }
