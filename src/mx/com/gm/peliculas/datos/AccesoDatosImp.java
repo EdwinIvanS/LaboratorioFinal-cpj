@@ -2,8 +2,6 @@ package mx.com.gm.peliculas.datos;
 
 import java.io.*;
 import java.util.*;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import mx.com.gm.peliculas.domain.Pelicula;
 import mx.com.gm.peliculas.excepciones.*;
 
