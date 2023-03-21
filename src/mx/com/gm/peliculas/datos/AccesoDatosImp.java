@@ -34,6 +34,7 @@ public class AccesoDatosImp implements IAccesoDatos {
             throw new LecturaDatosEx("Excepcion a listar las peliculas");
         } catch (IOException ex) {
             ex.printStackTrace(System.out);
+            throw new LecturaDatosEx("Excepcion a listar las peliculas");
         }
         return peliculas;
     }
@@ -64,7 +65,6 @@ public class AccesoDatosImp implements IAccesoDatos {
             String linea = null;
             linea = entrada.readLine();
             int indice = 1;
-
             while (linea != null) {
                 if (buscar != null && buscar.equalsIgnoreCase((linea))) {
                     resultado = "Pelicula : " + linea + " encontrada en el indice " + indice;
@@ -101,8 +101,7 @@ public class AccesoDatosImp implements IAccesoDatos {
 
     @Override
     public void borrar(String nombreRecurso) {
-        File archivo = new File(nombreRecurso);
-        
+        File archivo = new File(nombreRecurso);        
         if(archivo.exists()){
             archivo.delete();
         }
