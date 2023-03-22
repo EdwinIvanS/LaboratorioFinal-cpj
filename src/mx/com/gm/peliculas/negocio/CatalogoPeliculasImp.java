@@ -32,7 +32,7 @@ public class CatalogoPeliculasImp implements ICatalogoPeliculas{
             var peliculas = this.datos.listar(NOMBRE_RECURSO);
             
             for (var pelicula : peliculas) {
-                System.out.println("Peliculas ==> " + pelicula);
+                System.out.println("Pelicula ==> " + pelicula);
             }
         } catch (AccesoDatosEx ex) {
             ex.printStackTrace(System.out);

@@ -41,13 +41,13 @@ public class AccesoDatosImp implements IAccesoDatos {
 
     @Override
     public void escribir(Pelicula pelicula, String nombreRecurso, boolean anexar) throws EscrituraDatosEx {
-        File archivo = new File(nombreRecurso);
+        var archivo = new File(nombreRecurso);
 
         try {
-            var salida = new PrintWriter(new FileWriter(archivo));
-            salida.println(pelicula.toString());
+            var salida = new PrintWriter(new FileWriter(archivo, anexar));
+            salida.println(pelicula.toString());       
             salida.close();
-            System.out.println("Se ha escrito informacion en el archivo : " + pelicula);
+            System.out.println("Se ha escrito informacion al archivo : " + pelicula);     
         } catch (IOException ex) {
             ex.printStackTrace(System.out);
             throw new EscrituraDatosEx("Exception al escribir peliculas");
