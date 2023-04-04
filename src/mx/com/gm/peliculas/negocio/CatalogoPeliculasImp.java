@@ -22,7 +22,7 @@ public class CatalogoPeliculasImp implements ICatalogoPeliculas{
             datos.escribir(pelicula, NOMBRE_RECURSO, anexar);
         } catch (AccesoDatosEx ex) {
             ex.printStackTrace(System.out);
-            System.out.println("Error de acceso a datos");
+            System.out.println("Error de acceso a datos " + ex.getMessage());
         }
     }
 
@@ -36,7 +36,7 @@ public class CatalogoPeliculasImp implements ICatalogoPeliculas{
             }
         } catch (AccesoDatosEx ex) {
             ex.printStackTrace(System.out);
-            System.out.println("Error de acceso a listar peliculas");
+            System.out.println("Error de acceso a listar peliculas" + ex.getMessage());
         }
     }
 

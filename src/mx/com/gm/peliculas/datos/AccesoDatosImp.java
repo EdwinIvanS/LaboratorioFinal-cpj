@@ -44,7 +44,7 @@ public class AccesoDatosImp implements IAccesoDatos {
         var archivo = new File(nombreRecurso);
 
         try {
-            var salida = new PrintWriter(new FileWriter(archivo, anexar));
+            PrintWriter salida = new PrintWriter(new FileWriter(archivo, anexar));
             salida.println(pelicula.toString());       
             salida.close();
             System.out.println("Se ha escrito informacion al archivo : " + pelicula);     
